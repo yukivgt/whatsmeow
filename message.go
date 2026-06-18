@@ -953,7 +953,7 @@ func (cli *Client) storeHistoricalMessageSecrets(ctx context.Context, conversati
 		}
 		if !chatPN.IsEmpty() && conv.GetTcToken() != nil {
 			privacyTokens = append(privacyTokens, store.PrivacyToken{
-				User:            chatPN,
+				User:            chatJID,
 				Token:           conv.GetTcToken(),
 				Timestamp:       time.Unix(int64(conv.GetTcTokenTimestamp()), 0),
 				SenderTimestamp: time.Unix(int64(conv.GetTcTokenSenderTimestamp()), 0),
